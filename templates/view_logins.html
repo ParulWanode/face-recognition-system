@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Logs</title>
+</head>
+<body>
+    <h1>Login Logs</h1>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Login Date and Time</th>
+        </tr>
+        {% for log in logs %}
+        <tr>
+            <td>{{ log[0] }}</td>
+            <td>{{ log[1] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="{{ url_for('index') }}">Go back to Home</a>
+</body>
+</html>
